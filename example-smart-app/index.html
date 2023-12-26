@@ -96,6 +96,11 @@
           $('#errors').html('<p> Failed to call FHIR Service </p>');
         }
       );
+
+      FHIR.oauth2.authorize({
+        'client_id': 'f60f3f83-ebf7-4e33-a3c9-3f52c16a07e0',
+        'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile'
+      });
     </script>
   </body>
 </html>
